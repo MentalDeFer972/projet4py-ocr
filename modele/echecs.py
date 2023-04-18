@@ -11,8 +11,8 @@ class Tournoi:
     date_debut = ""
     date_fin = ""
     nbre_tours = 0
-    num_joueurs = ""
-    num_tours = ""
+    liste_joueurs = []
+    liste_tours = []
 
 class Joueur:
     num_joueur = ""
@@ -22,18 +22,19 @@ class Joueur:
     date_naissance = ""
 
 class Rapports:
-    num_joueur = ""
-    num_tournois = ""
+    num_rapports = ""
+    num_tournoi = ""
+    liste = []
 
-class Tours:
-    num_tours = ""
-    nom = ""
-    liste_score = ""
-    num_joueur = ""
-    liste_match = ""
+class Tour:
+    nom_tour = ""
+    liste_match = []
+    date_debut = ""
+    date_fin = ""
 
 class Match:
     num_match = ""
-    liste_joueurs = ""
-    liste_match = ""
+    nom = ""
+    liste_joueurs = []
+    liste_match = []
     score = 0

@@ -1,3 +1,6 @@
+from json import JSONEncoder
+
+
 class Club:
     id_national = ""
     num_joueur = ""
@@ -46,6 +49,10 @@ class Joueur:
         self.num_club = num_club
         self.date_naissance = date_naissance
         self.num_joueur = num_joueur
+
+class JoueurEncoder(JSONEncoder):
+    def default(self,o):
+        return o.__dict__
 
 
 class Rapports:

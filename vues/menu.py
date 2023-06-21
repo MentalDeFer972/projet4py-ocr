@@ -39,7 +39,7 @@ class State:
         elif saisie == 3:
             self.gerer_tour_match()
         elif saisie == 4:
-            self.faire_rapports()
+            self.gerer_rapports()
         else:
             self.gestion_menu()
 

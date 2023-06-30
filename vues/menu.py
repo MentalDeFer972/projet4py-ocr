@@ -8,15 +8,15 @@ class State:
             saisie = int(input())
             return saisie
         if self == 2:
-            print("GERER UN JOUEUR/n1-Ajouter un joueur/n2-Supprimer un joueur/n3-Modifier un joueur")
+            print("GERER UN JOUEUR/n1-Ajouter un joueur/n2-Supprimer un joueur/n3-Modifier un joueur/n4-Retour")
             saisie = int(input())
             return saisie
         if self == 3:
-            print("GERER UN TOURNOI/n1-Ajouter un tournoi/n2-Supprimer un tournoi/n3-Modifier un tournoi")
+            print("GERER UN TOURNOI/n1-Ajouter un tournoi/n2-Supprimer un tournoi/n3-Modifier un tournoi/n4-Retour")
             saisie = int(input())
             return saisie
         if self == 4:
-            print("GERER UN TOUR/MATCH/n1-Ajouter un tour/n2-Supprimer un tour/n3-Modifier un tour")
+            print("GERER UN TOUR/MATCH/n1-Ajouter un tour/n2-Supprimer un tour/n3-Modifier un tour/n4-Retour")
             saisie = int(input())
             return saisie
         if self == 5:
@@ -25,7 +25,8 @@ class State:
                     "2-liste de tous les tournois/n"
                     "3-nom et dates d’un tournoi donné/n"
                     "4-liste des joueurs du tournoi par ordre alphabétique/n"
-                    "5-liste de tous les tours du tournoi et de tous les matchs du tour")
+                    "5-liste de tous les tours du tournoi et de tous les matchs du tour/n"
+                    "6-Retour")
             saisie = int(input())
             return saisie
 
@@ -51,6 +52,8 @@ class State:
             pass
         elif saisie == 3:
             pass
+        elif saisie == 4 :
+            pass
         else:
             self.gerer_joueur()
     def gerer_tournoi(self):
@@ -61,6 +64,8 @@ class State:
             pass
         elif saisie == 3:
             pass
+        elif saisie == 4:
+            pass
         else:
             self.gerer_tournoi()
     def gerer_tour_match(self):
@@ -70,6 +75,8 @@ class State:
         elif saisie == 2:
             pass
         elif saisie == 3:
+            pass
+        elif saisie == 4:
             pass
         else:
             self.gerer_tour_match()
@@ -85,6 +92,8 @@ class State:
         elif saisie == 4:
             pass
         elif saisie == 5:
+            pass
+        elif saisie == 6:
             pass
         else:
             self.gerer_rapports()

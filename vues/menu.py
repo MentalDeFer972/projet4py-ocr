@@ -6,28 +6,28 @@ class State:
 
     def display_menu(self,nombre):
         if nombre == 1:
-            print("MENU PRINCIPAL/n1-Gérer les Joueurs/n2-Gérer les tournois/n3-Gérer Tours et Matchs/n4-Faire des Rapports")
+            print("MENU PRINCIPAL\n 1-Gérer les Joueurs \n 2-Gérer les tournois \n 3-Gérer Tours et Matchs \n 4-Faire des Rapports")
             saisie = int(input())
             return saisie
         if nombre == 2:
-            print("GERER UN JOUEUR/n1-Ajouter un joueur/n2-Supprimer un joueur/n3-Modifier un joueur/n4-Retour")
+            print("GERER UN JOUEUR \n 1-Ajouter un joueur \n 2-Supprimer un joueur \n 3-Modifier un joueur \n 4-Retour")
             saisie = int(input())
             return saisie
         if nombre == 3:
-            print("GERER UN TOURNOI/n1-Ajouter un tournoi/n2-Supprimer un tournoi/n3-Modifier un tournoi/n4-Retour")
+            print("GERER UN TOURNOI \n 1-Ajouter un tournoi \n 2-Supprimer un tournoi \n 3-Modifier un tournoi \n 4-Retour")
             saisie = int(input())
             return saisie
         if nombre == 4:
-            print("GERER UN TOUR/MATCH/n1-Ajouter un tour/n2-Supprimer un tour/n3-Modifier un tour/n4-Retour")
+            print("GERER UN TOUR/MATCH \n 1-Ajouter un tour \n 2-Supprimer un tour \n 3-Modifier un tour \n 4-Retour")
             saisie = int(input())
             return saisie
         if nombre == 5:
-            print("FAIRE DES RAPPORTS/n"
-                    "1-liste de tous les joueurs par ordre alphabétique/n"
-                    "2-liste de tous les tournois/n"
-                    "3-nom et dates d’un tournoi donné/n"
-                    "4-liste des joueurs du tournoi par ordre alphabétique/n"
-                    "5-liste de tous les tours du tournoi et de tous les matchs du tour/n"
+            print("FAIRE DES RAPPORTS\n"
+                    "1-liste de tous les joueurs par ordre alphabétique\n"
+                    "2-liste de tous les tournois\n"
+                    "3-nom et dates d’un tournoi donné\n"
+                    "4-liste des joueurs du tournoi par ordre alphabétique\n"
+                    "5-liste de tous les tours du tournoi et de tous les matchs du tour\n"
                     "6-Retour")
             saisie = int(input())
             return saisie
@@ -55,7 +55,7 @@ class State:
         elif saisie == 3:
             pass
         elif saisie == 4 :
-            pass
+            self.gestion_menu()
         else:
             self.gerer_joueur()
     def gerer_tournoi(self):
@@ -67,7 +67,7 @@ class State:
         elif saisie == 3:
             pass
         elif saisie == 4:
-            pass
+            self.gestion_menu()
         else:
             self.gerer_tournoi()
     def gerer_tour_match(self):
@@ -79,7 +79,7 @@ class State:
         elif saisie == 3:
             pass
         elif saisie == 4:
-            pass
+            self.gestion_menu()
         else:
             self.gerer_tour_match()
 
@@ -96,7 +96,7 @@ class State:
         elif saisie == 5:
             pass
         elif saisie == 6:
-            pass
+            self.gestion_menu()
         else:
             self.gerer_rapports()
 

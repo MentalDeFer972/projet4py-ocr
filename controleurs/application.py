@@ -2,7 +2,6 @@ import json
 
 from modele.echecs import Joueur, JoueurEncoder
 
-
 class UserManager:
     def supprimer_joueur(self):
         pass
@@ -20,3 +19,12 @@ class UserManager:
             date_naissance = data['date_naissance']
             print(f" Num Joueur: {num_joueur} , Num Club: {num_club} , Nom Famille: {nom_famille} , Prenom: {prenom}")
 
+class TournamentManager:
+    def supprimer_tournoi(self):
+        pass
+    def ajouter_tournoi(self):
+        pass
+    def extraire_informations_tournoi(self):
+        pass
+class MenuManager:
+    pass

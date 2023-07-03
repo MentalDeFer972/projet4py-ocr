@@ -43,12 +43,10 @@ class Joueur:
     prenom = ""
     date_naissance = ""
 
-    def __init__(self, num_joueur, num_club, nom_famille, prenom, date_naissance):
-        self.prenom = prenom
+    def __init__(self, nom_famille, prenom, date_naissance):
         self.nom_famille = nom_famille
-        self.num_club = num_club
+        self.prenom = prenom
         self.date_naissance = date_naissance
-        self.num_joueur = num_joueur
 
 class JoueurEncoder(JSONEncoder):
     def default(self,o):

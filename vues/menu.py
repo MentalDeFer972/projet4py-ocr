@@ -41,12 +41,12 @@ class State:
             saisie = int(input())
             return saisie
         if nombre == 5:
-            print("FAIRE DES RAPPORTS\n"
-                  "1-liste de tous les joueurs par ordre alphabétique \n"
-                  "2-liste de tous les tournois \n"
-                  "3-nom et dates d’un tournoi donné \n"
-                  "4-liste des joueurs du tournoi par ordre alphabétique \n"
-                  "5-liste de tous les tours du tournoi et de tous les matchs du tour \n"
+            print("FAIRE DES RAPPORTS \n "
+                  "1-liste de tous les joueurs par ordre alphabétique \n "
+                  "2-liste de tous les tournois \n "
+                  "3-nom et dates d’un tournoi donné \n "
+                  "4-liste des joueurs du tournoi par ordre alphabétique \n "
+                  "5-liste de tous les tours du tournoi et de tous les matchs du tour \n "
                   "6-Retour")
             saisie = int(input())
             return saisie
@@ -67,7 +67,16 @@ class State:
     def gerer_joueur(self):
         saisie = self.display_menu(2)
         if saisie == 1:
-            UserManager.ajouter_joueur()
+            print("AJOUT D'UN JOUEUR \n ")
+            print("Veuillez saisir le nom de famille du joueur : \n")
+            nom_famille = input()
+            print("Veuillez saisir le prénom du joueur : \n ")
+            prenom = input()
+            print("Veuillez saisir la date de naissance du joueur : \n")
+            date_naissance = input()
+            UserManager.ajouter_joueur(nom_famille, prenom, date_naissance)
+            print("Joueur ajouté!")
+            self.gerer_joueur()
         elif saisie == 2:
             UserManager.supprimer_joueur()
         elif saisie == 3:

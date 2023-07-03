@@ -5,8 +5,8 @@ from modele.echecs import Joueur, JoueurEncoder
 class UserManager:
     def supprimer_joueur(self):
         pass
-    def ajouter_joueur(self):
-        joueur = Joueur("A01","N03","TERRINE","Joffrey","13/01/1998")
+    def ajouter_joueur(self,nom_famille, prenom, date_naissance):
+        joueur = Joueur(nom_famille, prenom, date_naissance)
         with open("joueur.json","w") as f:
             json.dump(joueur, f, cls=JoueurEncoder)
     def extraire_informations_joueur(self):

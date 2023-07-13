@@ -74,7 +74,8 @@ class State:
             prenom = input()
             print("Veuillez saisir la date de naissance du joueur : \n")
             date_naissance = input()
-            UserManager.ajouter_joueur(nom_famille, prenom, date_naissance)
+            user = UserManager()
+            user.ajouter_joueur(nom_famille, prenom, date_naissance)
             print("Joueur ajouté!")
             self.gerer_joueur()
         elif saisie == 2:

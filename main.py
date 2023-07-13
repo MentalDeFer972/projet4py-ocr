@@ -1,5 +1,7 @@
 import vues.menu
+import controleurs.application
 from vues import *
 
-v = vues.menu.State()
-v.gestion_menu()
+user = controleurs.application.UserManager()
+
+user.select_joueur()

@@ -1,3 +1,4 @@
+import json
 from json import JSONEncoder
 
 
@@ -48,10 +49,8 @@ class Joueur:
         self.prenom = prenom
         self.date_naissance = date_naissance
 
-class JoueurEncoder(JSONEncoder):
-    def default(self,o):
-        return o.__dict__
-
+    def toJson(self):
+        return json.dumps(self,default=lambda o: o.__dict__)
 
 class Rapports:
     num_rapports = ""

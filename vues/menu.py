@@ -52,6 +52,9 @@ class State:
             return saisie
 
     def gestion_menu(self):
+        user = UserManager()
+        user.charger_donnees_json()
+
         saisie = self.display_menu(1)
         if saisie == 1:
             self.gerer_joueur()
@@ -77,6 +80,7 @@ class State:
             user = UserManager()
             user.ajouter_joueur(nom_famille, prenom, date_naissance)
             print("Joueur ajouté!")
+            user.enregister_donnees_json()
             self.gerer_joueur()
         elif saisie == 2:
             UserManager.supprimer_joueur()

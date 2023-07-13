@@ -49,8 +49,20 @@ class Joueur:
         self.prenom = prenom
         self.date_naissance = date_naissance
 
-    def toJson(self):
-        return json.dumps(self,default=lambda o: o.__dict__)
+class JoueurEncoder(JSONEncoder):
+    def default(self, o):
+        return o.__dict__
+
+class JoueurDecoder(json.JSONDecoder):
+    def __init__(self, object_hook=None ,*args, **kwargs):
+        super.__init__(object_hook, *args, **kwargs)
+    def object_hook(self,o):
+        decoded_joueur = Joueur(
+            o.get('nom_famille'),
+            o.get('prenom'),
+            o.get('date_naissance')
+        )
+        return decoded_joueur
 
 class Rapports:
     num_rapports = ""
